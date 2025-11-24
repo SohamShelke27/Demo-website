@@ -1,0 +1,26 @@
+/* Simple, modern, responsive CSS */
+:root{
+--max-width:1100px;
+--accent:#0b6efd;
+--muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6;margin:0;color:#222}
+.container{width:calc(100% - 2rem);max-width:var(--max-width);margin:0 auto;padding:2rem 1rem}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
+.nav-row{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;text-decoration:none;color:var(--accent);font-size:1.15rem}
+.main-nav{display:flex;gap:1rem}
+.main-nav a{color:#222;text-decoration:none;padding:.5rem}
+.menu-toggle{display:none;background:none;border:0;font-size:1.25rem}
+.hero{padding:4rem 0;text-align:center;background:linear-gradient(180deg, rgba(11,110,253,0.06), transparent)}
+.hero h1{font-size:2rem;margin:.25rem 0}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin:2rem 0}
+.site-footer{border-top:1px solid #eee;padding:1rem 0;text-align:center;color:var(--muted)}
+.contact-form{max-width:650px;margin-top:1rem;display:grid;gap:.5rem}
+input,textarea{padding:.6rem;border:1px solid #ddd;border-radius:6px;font-family:inherit}
+@media (max-width:700px){
+.main-nav{display:none}
+.menu-toggle{display:block}
+}
